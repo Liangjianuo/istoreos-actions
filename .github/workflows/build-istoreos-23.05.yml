@@ -21,8 +21,7 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:
-   - cron: 0 16 * * *
+  
 
 env:
   REPO_URL: https://github.com/istoreos/istoreos
@@ -44,12 +43,8 @@ jobs:
     strategy:
       matrix:
         REPO_BRANCH:
-          # - main
-          # - istoreos-22.03
           - istoreos-23.05
         ARCHITECTURE:
-          - rk33xx
-          - rk35xx
           - x86
         os:
           - ubuntu-22.04
@@ -230,7 +225,7 @@ jobs:
 
         ⏱️ 编译时间: $(date +"%Y年%m月%d日%H时%M分")
 
-        🌐 管理地址: 192.168.10.1
+        🌐 管理地址: 192.168.100.1
 
         👤 用户名: root
 
